@@ -1,6 +1,6 @@
 import rss, { pagesGlobToRssItems } from '@astrojs/rss';
 
-export async function get() {
+export async function GET() {
   return rss({
     title: "Lifan's Blog",
     description: "Still demo",

@@ -1,7 +1,7 @@
 ---
 import ArchivePostList from "../layouts/ArchivePostList.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-const allPosts = await Astro.glob("./posts/*.md");
+const allPosts = Object.values(import.meta.glob("./posts/*.md", { eager: true }));
 const tags = ["Photography", "Coding", "Random Roaming"];
 const posts = [];
 
